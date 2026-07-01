@@ -1,0 +1,207 @@
+:root {
+    /* Colores */
+    --color-fondo: antiquewhite;
+    --color-tarjeta: #e1d5f0;
+    --color-texto: black;
+    --color-acento: #212529;
+
+    /* Fuentes */
+    --fuente-titulos: 'Great Vibes', cursive;
+    --fuente-textos: 'Courier New', Courier, monospace;
+    --fuente-ui: Arial, sans-serif;
+
+    /* Espaciados (usados en grilla y componentes custom) */
+    --espacio-sm: 1rem;
+    --espacio-md: 1.5rem;
+    --espacio-xl: 3rem;
+}
+
+/* BASE Y ESTRUCTURA GENERAL */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-textos);
+}
+
+/* CLASES GENERALES (UTILIDADES) */
+.bg-tarjeta {
+    background-color: var(--color-tarjeta);
+}
+
+.bg-fondo {
+    background-color: var(--color-fondo);
+}
+
+/* TIPOGRAFÍA */
+.h1 {
+    font-family: var(--fuente-titulos);
+    font-size: 140px;
+    color: var(--color-texto);
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 80px;
+    color: var(--color-texto);
+    margin-bottom: var(--espacio-sm);
+}
+
+.p {
+    font-size: 24px;
+    color: var(--color-texto);
+    font-family: var(--fuente-textos);
+    text-align: justify;
+}
+
+
+
+/* COMPONENTES ESPECÍFICOS */
+.btn-outline-dark:hover {
+    color: var(--color-tarjeta) !important;
+}
+
+.espaciador-logo {
+    width: 110px;
+}
+
+.img-logo {
+    width: 110px;
+    margin-bottom: -45px;
+    position: relative;
+    z-index: 2000;
+}
+
+.img-perfil {
+    max-width: 350px;
+    aspect-ratio: 1/1;
+}
+
+.img-obra {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    background: rgba(0, 0, 0, 0.03);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.img-obra:hover {
+    transform: scale(1.05);
+}
+
+/* Sección Galería */
+.grilla-galeria {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--espacio-sm) var(--espacio-xl);
+    align-items: start;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.grilla-galeria .h2 {
+    grid-column: 1 / -1;
+    margin-top: -1.5rem;
+    margin-bottom: var(--espacio-md);
+}
+
+.nombre-obra {
+    font-family: var(--fuente-textos);
+    font-size: 24px;
+    color: var(--color-texto);
+}
+
+/* Diseño Responsivo */
+@media (min-width: 768px) {
+    .grilla-galeria {
+        grid-template-columns: 4fr 4fr 3fr;
+    }
+
+    .grilla-galeria figure:nth-of-type(1) .img-obra,
+    .grilla-galeria figure:nth-of-type(2) .img-obra,
+    .grilla-galeria figure:nth-of-type(5) .img-obra,
+    .grilla-galeria figure:nth-of-type(6) .img-obra {
+        aspect-ratio: 2/3;
+    }
+
+    .grilla-galeria figure:nth-of-type(1) {
+        grid-column: 1;
+        grid-row: 2 / span 2;
+    }
+
+    .grilla-galeria figure:nth-of-type(2) {
+        grid-column: 2;
+        grid-row: 2 / span 2;
+    }
+
+    .grilla-galeria figure:nth-of-type(3) {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .grilla-galeria figure:nth-of-type(4) {
+        grid-column: 3;
+        grid-row: 3;
+    }
+
+    .grilla-galeria figure:nth-of-type(5) {
+        grid-column: 1;
+        grid-row: 4 / span 2;
+    }
+
+    .grilla-galeria figure:nth-of-type(6) {
+        grid-column: 2;
+        grid-row: 4 / span 2;
+    }
+
+    .grilla-galeria figure:nth-of-type(7) {
+        grid-column: 3;
+        grid-row: 4;
+    }
+
+    .grilla-galeria figure:nth-of-type(8) {
+        grid-column: 3;
+        grid-row: 5;
+    }
+}
+
+/* Adaptación para Celulares (Responsive) */
+@media (max-width: 767px) {
+    .h1 {
+        font-size: 70px;
+    }
+
+    .h2 {
+        font-size: 45px;
+    }
+
+    .p {
+        font-size: 18px;
+    }
+
+    .texto-footer {
+        font-size: 1.25rem !important;
+    }
+
+    .img-logo {
+        width: 80px;
+        margin-bottom: 0;
+    }
+
+    .img-perfil {
+        max-width: 250px;
+    }
+}
