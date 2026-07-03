@@ -1,0 +1,3 @@
+Faby Arte y Deco es una aplicación web creada para exhibir las obras artísticas del emprendimiento en un espacio propio, organizado y visualmente atractivo. El proyecto busca brindar una experiencia centrada en la contemplación del arte, permitiendo que los visitantes recorran pinturas y trabajos realizados con distintos materiales, acompañados por el título de cada obra.
+
+La página no tiene un fin comercial, sino que pretende transmitir emociones a través del color y las formas, reflejando el concepto "Alma en colores". Está dirigida al público en general, especialmente a quienes disfrutan del arte y la decoración.
